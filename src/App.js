@@ -1,12 +1,5 @@
 import { NavBar } from './components';
-import {
-  About,
-  Footer,
-  Header,
-  Skills,
-  Testimonials,
-  Works,
-} from './containers';
+import { About, Footer, Home, Skills, Testimonials, Works } from './containers';
 
 import './App.scss';
 
@@ -14,7 +7,7 @@ function App() {
   return (
     <div className="app">
       <NavBar />
-      <Header />
+      <Home />
       <About />
       <Works />
       <Skills />
