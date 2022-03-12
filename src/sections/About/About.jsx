@@ -1,29 +1,26 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-import { images } from '../../constants';
+import { sanity, urlFor } from '../../client';
+import { SectionWrapper } from '../../hocs';
 
 import './About.scss';
 
-const abouts = [
-  {
-    title: 'Front-end Development',
-    description: 'Design and implementation experience',
-    imgUrl: images.about01,
-  },
-  {
-    title: 'Back-end Development',
-    description: 'API development and database optimization',
-    imgUrl: images.about02,
-  },
-  {
-    title: 'Web Development',
-    description: 'Full-stack web application development at scale',
-    imgUrl: images.about03,
-  },
-];
+const QUERY_ABOUTS = '*[_type == "abouts"]';
 
 const About = (props) => {
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+    sanity
+      .fetch(QUERY_ABOUTS)
+      .then((data) => {
+        console.log(data);
+        setAbouts(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <>
       <h2 className="head-text">
@@ -41,7 +38,7 @@ const About = (props) => {
               className="app__profiles-item"
               key={about.title + index}
             >
-              <img src={about.imgUrl} alt={about.title} />
+              <img src={urlFor(about.imgUrl)} alt={about.title} />
               <h2 className="bold-text" style={{ marginTop: 20 }}>
                 {about.title}
               </h2>
@@ -56,4 +53,4 @@ const About = (props) => {
   );
 };
 
-export default About;
+export default SectionWrapper(About, 'about');

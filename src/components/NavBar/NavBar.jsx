@@ -6,10 +6,11 @@ import { images } from '../../constants';
 import './_NavBar.scss';
 import { useState } from 'react';
 
-const NAV_ITEMS = ['home', 'about', 'work', 'skills', 'contact'];
+const NAV_ITEMS = ['home', 'about', 'works', 'skills', 'contact'];
 
 const NavBar = (props) => {
   const [toggle, setToggle] = useState(false);
+
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">

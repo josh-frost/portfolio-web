@@ -1,5 +1,5 @@
 import { NavBar } from './components';
-import { About, Footer, Home, Skills, Testimonials, Works } from './containers';
+import { About, Footer, Home, Skills, Testimonials, Works } from './sections';
 
 import './App.scss';
 

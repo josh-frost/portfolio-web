@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
+import { SectionWrapper } from '../../hocs';
 
 import './Home.scss';
 
@@ -67,4 +68,4 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+export default SectionWrapper(Home, 'home');
