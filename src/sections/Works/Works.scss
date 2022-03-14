@@ -48,6 +48,7 @@
 
   .app__work-item {
     width: 270px;
+    height: 350px;
     flex-direction: column;
 
     margin: 2rem;
@@ -64,6 +65,7 @@
 
     @media (min-width: 2000px) {
       width: 470px;
+      height: 610px;
       padding: 1.25rem;
       border-radius: 0.75rem;
     }
@@ -137,6 +139,10 @@
   h4 {
     margin-top: 1rem;
     line-height: 1.5;
+  }
+
+  .p-text {
+    text-align: center;
   }
 
   .app__work-tag {

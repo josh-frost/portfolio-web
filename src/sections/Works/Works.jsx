@@ -72,7 +72,7 @@ const Works = (props) => {
                     referrerPolicy="no-referrer"
                   >
                     <motion.div
-                      whileInView={{ scale: [0, 1] }}
+                      // whileInView={{ scale: [0, 1] }}
                       whileHover={{ scale: [1, 0.9] }}
                       transition={{
                         duration: 0.25,
@@ -89,7 +89,7 @@ const Works = (props) => {
                     referrerPolicy="no-referrer"
                   >
                     <motion.div
-                      whileInView={{ scale: [0, 1] }}
+                      //whileInView={{ scale: [0, 1] }}
                       whileHover={{ scale: [1, 0.9] }}
                       transition={{
                         duration: 0.25,
